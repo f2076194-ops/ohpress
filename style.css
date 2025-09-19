@@ -1,0 +1,62 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f6f3;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fade-img {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.fade-img:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.btn-animate {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-animate:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 20px #f6c8d5;
+}
+
+.dropdown-enter {
+  animation: dropdownEnter 0.4s;
+}
+@keyframes dropdownEnter {
+  from { opacity:0; transform:translateY(-20px);}
+  to { opacity:1; transform:translateY(0);}
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Media queries para mejorar diseño en móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  .grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
